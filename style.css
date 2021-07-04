@@ -1,0 +1,138 @@
+:root {
+  --width: 90%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0 15px;
+  background: url(light.jpeg) no-repeat;
+  background-size: 100% 100vh;
+  transition: all .1s linear;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+header {
+  display: block;
+  width: 100%;
+  padding: 10px 0 0 0;
+  position: relative;
+}
+
+.dots {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 8px;
+}
+
+.dots div {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin: 2px 0;
+  background-color: #fff;
+}
+
+#popup {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 200px;
+  transform: scaleY(0);
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 5px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, .2);
+  z-index: 5;
+  transition: all .3s linear;
+}
+
+#popup ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+#popup ul li {
+  cursor: pointer;
+  padding: 15px;
+}
+
+.container h2 {
+  letter-spacing: 5px;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 40px 0;
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
+}
+
+#city {
+  width: var(--width);
+  padding: 14px 10px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, .8);
+  border: none;
+  outline: none;
+  font-size: 15px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, .2);
+}
+
+#temperature {
+  margin: 60px 0 0 0;
+  color: #fff;
+  font-size: 42px;
+  font-weight: 400;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
+}
+
+#cityName {
+  margin: 20px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+}
+
+#autocomplete {
+  list-style-type: none;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, .2);
+}
+
+#autocomplete li {
+  text-align: left;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #000;
+  display: none;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --width: 100%;
+  }
+}

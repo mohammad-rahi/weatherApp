@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta id="themeColor" name="theme-color" content="#F6A945" />
+  <title>HTML</title>
+  <!-- HTML -->
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+  <div class="container">
+    <div onclick="closePopup()" id="overlay"></div>
+    <header>
+      <div onclick="openPopup()" class="dots">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="popup">
+        <ul>
+          <li onclick="changeTheme()">Change theme</li>
+        </ul>
+      </div>
+    </header>
+    <h2>Weather App</h2>
+    <form autocomplete="off" onsubmit="return weather(event)" accept-charset="utf-8">
+      <input type="text" name="city" id="city" placeholder="Search or type city name" />
+      <ul id="autocomplete">
+      </ul>
+    </form>
+    <p id="temperature"></p>
+    <p id="cityName"></p>
+  </div>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+
+</html>
